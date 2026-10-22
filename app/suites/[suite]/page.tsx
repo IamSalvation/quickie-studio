@@ -13,9 +13,18 @@ const suiteDetails: Record<Suite, { title: string, description: string }> = {
     ai: { title: "AI", description: "One assistant across the Studio." },
 };
 
-// 1. We must make the component "async"
+// This tells Next.js exactly which pages to build ahead of time.
+export async function generateStaticParams() {
+    return [
+        { suite: "money" },
+        { suite: "work" },
+        { suite: "create" },
+        { suite: "learn" },
+        { suite: "ai" },
+    ];
+}
+
 export default async function SuitePage({ params }: { params: Promise<{ suite: string }> }) {
-    // 2. We must await the params to get the suite slug
     const resolvedParams = await params;
     const suiteKey = resolvedParams.suite as Suite;
 
@@ -46,7 +55,7 @@ export default async function SuitePage({ params }: { params: Promise<{ suite: s
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {suiteApps.map((app) => (
-                            <div key={app.slug} className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+                            <div key={app.slug} className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm flex flex-col">
                                 <div className="flex items-center gap-4 mb-6">
                                     <Image src={`/logos/${app.slug}.png`} alt={app.name} width={48} height={48} className="rounded-xl" />
                                     <div>
@@ -62,18 +71,18 @@ export default async function SuitePage({ params }: { params: Promise<{ suite: s
                                     </div>
                                 </div>
 
-                                <p className="text-gray-600 mb-8">{app.tagline}</p>
+                                <p className="text-gray-600 mb-8 flex-grow">{app.tagline}</p>
 
                                 {app.status === "live" ? (
                                     <Link
                                         href={app.url || "#"}
                                         target="_blank"
-                                        className="inline-block rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy/90 transition-colors"
+                                        className="inline-block rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy/90 transition-colors w-fit"
                                     >
                                         Open {app.name} ↗
                                     </Link>
                                 ) : (
-                                    <span className="inline-block rounded-full bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-400 cursor-not-allowed">
+                                    <span className="inline-block rounded-full bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-400 cursor-not-allowed w-fit">
                                         {app.launchNote || "Coming Soon"}
                                     </span>
                                 )}
