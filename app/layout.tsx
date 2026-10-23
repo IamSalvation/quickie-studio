@@ -13,16 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://quickie-studio.vercel.app"), // Change this if your URL is different
   title: "Quickie Studio | One Studio. Nine tools.",
   description: "A hub of nine apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
   openGraph: {
     title: "Quickie Studio | One Studio. Nine tools.",
     description: "A hub of nine apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
-    url: "https://quickie-studio.vercel.app", // You can change this later if you buy a domain
+    url: "https://quickie-studio.vercel.app",
     siteName: "Quickie Studio",
     images: [
       {
-        url: "/logos/quickie-studio.png", // The image shown when shared
+        url: "/logos/quickie-studio.png",
         width: 800,
         height: 600,
         alt: "Quickie Studio Logo",
