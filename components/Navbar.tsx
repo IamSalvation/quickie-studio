@@ -21,9 +21,21 @@ export function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#suites" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">Apps</Link>
-          <Link href="/pricing" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">Pricing</Link>
-          <Link href="/about" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">About</Link>
+          <Link href="/business" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            Business
+          </Link>
+          <Link href="/suites" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            Apps
+          </Link>
+          <Link href="/ai" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            AI
+          </Link>
+          <Link href="/pricing" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            Pricing
+          </Link>
+          <Link href="/about" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            About
+          </Link>
         </div>
 
         {/* CTAs */}
