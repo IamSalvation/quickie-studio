@@ -64,9 +64,9 @@ export default function AIPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
 
-            {/* Omni Logo */}
+            {/* Omni Logo - Frosted Glass Container */}
             <motion.div variants={fadeUp} className="mb-8 flex justify-center">
-              <div className="relative w-24 h-24 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,229,255,0.4)] bg-black/50 p-2 border border-white/10">
+              <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,229,255,0.4)] bg-white/10 backdrop-blur-md p-4 border border-white/20">
                 <Image src="/logos/omni.png" alt="Omni AI" fill className="object-contain p-2" />
               </div>
             </motion.div>

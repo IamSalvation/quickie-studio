@@ -24,6 +24,9 @@ export function Navbar() {
           <Link href="/business" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
             Business
           </Link>
+          <Link href="/education" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
+            Education
+          </Link>
           <Link href="/suites" className="text-sm font-medium text-gray-500 hover:text-navy transition-colors">
             Apps
           </Link>

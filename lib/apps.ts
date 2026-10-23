@@ -18,7 +18,7 @@ export const apps: App[] = [
   { slug: "clockit", name: "Quickie ClockIt", suite: "money", tagline: "Workforce attendance and payroll, built for teams.", url: "https://quickie-clockit.vercel.app", status: "live", pricing: "paid", flagship: true },
   { slug: "docs", name: "Quickie Docs", suite: "work", tagline: "A full-featured editor that works offline.", url: "https://iamsalvation.github.io/quickie_docs/", status: "live", pricing: "free" },
   { slug: "chat", name: "Quickie Chat", suite: "work", tagline: "Instant private chat. No sign-up required.", url: null, status: "coming-soon", pricing: "free", launchNote: "Shipping soon" },
-  { slug: "eye", name: "Quickie Eye", suite: "create", tagline: "Teleprompter and camera for creators.", url: "https://iamsalvation.github.io/quickie_eye/", status: "live", pricing: "free" },
+  { slug: "eye", name: "Quickie Eye", suite: "create", tagline: "Teleprompter and camera for creators.", url: "https://iamsalvation.github.io/quickie-eye/", status: "live", pricing: "free" },
   { slug: "swap", name: "Quickie Swap", suite: "create", tagline: "Swap anything. Nothing uploaded. Ever.", url: "https://quickie-swap.netlify.app", status: "live", pricing: "free" },
   { slug: "prep", name: "Quickie Prep", suite: "learn", tagline: "10,000+ verified JAMB questions. 100% offline.", url: "https://quickie-prep.netlify.app", status: "live", pricing: "free" },
   { slug: "bible", name: "Oneness Bible", suite: "learn", tagline: "One with The Word. Offline, in four languages.", url: "https://iamsalvation.github.io/bible-site/", status: "live", pricing: "free" },
@@ -28,3 +28,4 @@ export const apps: App[] = [
 export const totalApps = apps.length;
 export const liveApps = apps.filter(a => a.status === "live").length;
 export const comingSoonApps = apps.filter(a => a.status === "coming-soon").length;
+
