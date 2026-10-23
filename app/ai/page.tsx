@@ -17,7 +17,7 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 };
 
-// Typing Effect Component
+// Typing Effect Component for Hero
 function TypingEffect() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -64,10 +64,13 @@ export default function AIPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
 
-            {/* Omni Logo - Frosted Glass Container */}
+            {/* Omni Logo - Glowing, No Background Container */}
             <motion.div variants={fadeUp} className="mb-8 flex justify-center">
-              <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,229,255,0.4)] bg-white/10 backdrop-blur-md p-4 border border-white/20">
-                <Image src="/logos/omni.png" alt="Omni AI" fill className="object-contain p-2" />
+              <div className="relative w-28 h-28 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan to-green opacity-30 blur-2xl rounded-full"></div>
+                <div className="relative w-full h-full drop-shadow-[0_0_15px_rgba(0,229,255,0.8)]">
+                  <Image src="/logos/omni.png" alt="Omni AI" fill className="object-contain" />
+                </div>
               </div>
             </motion.div>
 
@@ -96,6 +99,7 @@ export default function AIPage() {
                 method="POST"
                 className="flex flex-col sm:flex-row gap-3"
               >
+                {/* REPLACE YOUR_ACCESS_KEY_HERE WITH YOUR ACTUAL WEB3FORMS KEY */}
                 <input type="hidden" name="access_key" value="3b38af5f-b00b-44e0-aa7b-d06c284c5fa8" />
                 <input type="hidden" name="subject" value="New Omni Waitlist Signup!" />
 
@@ -121,8 +125,74 @@ export default function AIPage() {
         </div>
       </section>
 
+      {/* GENERAL AI CHAT MOCKUP SECTION */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4">A conversation with Omni.</h2>
+            <p className="text-gray-400 text-lg">Here is how it feels to work with an AI that understands exactly what you need.</p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="bg-[#0A101D] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl"
+          >
+            {/* User Message */}
+            <div className="flex gap-4 mb-6">
+              <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center flex-shrink-0 text-white font-bold border border-white/10">
+                JO
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl rounded-tl-sm p-4 text-gray-200 text-sm">
+                I need to launch a new product next month. Can you outline a 3-step marketing plan and draft a short email announcing it to my customers?
+              </div>
+            </div>
+
+            {/* Omni Message */}
+            <div className="flex gap-4">
+              <div className="w-10 h-10 rounded-full bg-quickie-gradient flex items-center justify-center flex-shrink-0 text-navy font-bold">
+                ✨
+              </div>
+              <div className="bg-cyan/10 border border-cyan/20 rounded-2xl rounded-tl-sm p-4 text-gray-200 text-sm w-full">
+                <p className="mb-4 text-white font-semibold">Here is your 3-step launch plan:</p>
+
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <strong className="text-cyan">1. Teaser Phase (Week 1-2)</strong>
+                    <p className="text-gray-400 text-xs mt-1">Build anticipation. Post behind-the-scenes content and collect emails for early access.</p>
+                  </div>
+                  <div>
+                    <strong className="text-cyan">2. Launch Day (Week 3)</strong>
+                    <p className="text-gray-400 text-xs mt-1">Release the product, host a live Q&A, and offer a 48-hour launch discount.</p>
+                  </div>
+                  <div>
+                    <strong className="text-cyan">3. Follow-up (Week 4)</strong>
+                    <p className="text-gray-400 text-xs mt-1">Share user testimonials and address common objections to push late adopters.</p>
+                  </div>
+                </div>
+
+                <div className="bg-black/30 rounded-lg p-3 border border-white/5 mt-4">
+                  <p className="text-white font-semibold text-xs mb-1">Drafted Email:</p>
+                  <p className="text-gray-400 text-xs italic">
+                    "Subject: Something big is coming...<br /><br />
+                    Hi [Name], we've been working on something special and couldn't wait to share it with you. Introducing [Product Name], the fastest way to [solve problem]..."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Fake Input */}
+            <div className="mt-8 flex items-center gap-3 bg-black/50 border border-white/10 rounded-full p-2 pl-6">
+              <span className="text-gray-500 text-sm flex-grow">Ask Omni to write, plan, or analyze...</span>
+              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-colors">
+                ↑
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* THE FOUR CAPABILITIES */}
-      <section className="py-24 relative">
+      <section className="py-24 relative bg-gradient-to-b from-transparent to-black/20">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Four ways to use Omni.</h2>
@@ -146,21 +216,6 @@ export default function AIPage() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      {/* TYPING MOCKUP SECTION */}
-      <section className="py-24 bg-gradient-to-b from-transparent to-black/50">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6">Just type. Omni does the rest.</h2>
-            <p className="text-gray-400 text-lg mb-16 max-w-2xl mx-auto">
-              No complex prompts. Just tell Omni what you need in plain English.
-            </p>
-          </motion.div>
-
-          <TypingEffect />
-
         </div>
       </section>
 
