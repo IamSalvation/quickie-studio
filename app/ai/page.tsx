@@ -90,15 +90,29 @@ export default function AIPage() {
               A general-purpose AI assistant for writing, planning, and explaining. Fast, private, and right where you work.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email for early access"
-                className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-cyan transition-colors"
-              />
-              <button className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
-                Join Waitlist
-              </button>
+            <motion.div variants={fadeUp} className="max-w-md mx-auto">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                <input type="hidden" name="access_key" value="3b38af5f-b00b-44e0-aa7b-d06c284c5fa8" />
+                <input type="hidden" name="subject" value="New Omni Waitlist Signup!" />
+
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email for early access"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-cyan transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105"
+                >
+                  Join Waitlist
+                </button>
+              </form>
             </motion.div>
             <motion.p variants={fadeUp} className="text-xs text-gray-500 mt-4">
               No spam. We'll only email you when Omni is ready.
