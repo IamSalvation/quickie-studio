@@ -30,7 +30,25 @@ export default function ChangelogPage() {
       <section className="py-24">
         <div className="container mx-auto px-4 md:px-8 max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="space-y-12">
-            
+            {/* Update 0 - NEW */}
+            <div className="relative pl-8 md:pl-0">
+              <div className="md:flex items-start gap-8">
+                <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
+                  <span className="text-sm font-bold text-gray-400">Today</span>
+                </div>
+                <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
+                  <div className="absolute w-4 h-4 bg-green rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <h3 className="text-2xl font-bold text-navy mb-2">The Studio Expands to 11 Tools</h3>
+                  <p className="text-gray-600 mb-4">We added two major new apps to the ecosystem.</p>
+                  <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
+                    <li>Launched <strong>Kaleo</strong>: Data-saving video and voice calling.</li>
+                    <li>Launched <strong>Aidao Player</strong>: Premium offline media player with visualizer.</li>
+                    <li>Updated the Homepage to dynamically count apps.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* Update 1 */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
@@ -93,3 +111,4 @@ export default function ChangelogPage() {
     </main>
   );
 }
+
