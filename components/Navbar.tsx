@@ -30,8 +30,9 @@ export function Navbar() {
               height={32}
               className="rounded"
             />
-            <span className="text-xl font-bold tracking-tight text-navy">
-              Quickie Studio
+            <span className="text-xl font-bold tracking-tight">
+              <span className="text-[#0A1C3A]">Quickie</span>{" "}
+              <span className="text-[#20C997]">Studio</span>
             </span>
           </Link>
 
@@ -71,7 +72,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - Moved OUTSIDE the nav tag to fix z-index and background */}
+      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out flex flex-col pt-24 px-6 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
