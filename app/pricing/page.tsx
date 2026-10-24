@@ -35,10 +35,7 @@ export default function PricingPage() {
 
       <section className="py-16 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* Free Tier */}
             <motion.div variants={fadeUp} className="rounded-3xl bg-white p-10 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
@@ -50,6 +47,8 @@ export default function PricingPage() {
               
               <ul className="space-y-4 mb-10 text-gray-600">
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Docs (Offline Editor)</li>
+                <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Kaleo (Video Calls)</li>
+                <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Aidao (Media Player)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Eye (Teleprompter)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Swap (File Converter)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Prep (JAMB Practice)</li>
