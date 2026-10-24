@@ -21,7 +21,7 @@ export default function AboutPage() {
             Software shouldn't be complicated.
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            We built Quickie Studio because the tools we needed didn't exist. So we made them ourselves.
+            We built Quickie Studio because the enterprise tools we needed didn't exist. So we made them ourselves.
           </p>
         </motion.div>
       </section>
@@ -31,27 +31,27 @@ export default function AboutPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="prose prose-lg prose-navy mx-auto text-gray-600">
             <h2 className="text-3xl font-bold text-navy mb-6">Our Story</h2>
             <p className="mb-6">
-              Quickie Studio started in Lagos, Nigeria, with a simple frustration: why does software have to be so heavy? Why do you need a dozen subscriptions, a high-end server, and a forced cloud sync just to track attendance, write a document, or study for an exam?
+              Quickie Studio started in Lagos, Nigeria, with a simple frustration: why does workforce and attendance software have to be so heavy? Why do you need a dozen subscriptions, a high-end server, and a forced cloud connection just to track who is in a building or process payroll?
             </p>
             <p className="mb-6">
-              We believe in <strong>local-first software</strong>. We believe your data is yours, and that tools should work even when the internet doesn't. That's why our apps like Docs and Bible run entirely on your device.
+              We believe in <strong>local-first, offline-capable software</strong>. We believe your data is yours, and that tools should work even when the internet doesn't. That's why our apps like Docs and Bible run entirely on your device, and our enterprise kiosks (Pinkas and ClockIt) use IndexedDB to keep scanning even when the network drops.
             </p>
             
-            <h2 className="text-3xl font-bold text-navy mt-12 mb-6">The Suites</h2>
+            <h2 className="text-3xl font-bold text-navy mt-12 mb-6">The 11-App Ecosystem</h2>
             <p className="mb-6">
-              We didn't want to build just one app. We wanted to build an ecosystem. That's how the suites were born:
+              We didn't want to build just one app. We wanted to build an ecosystem. That's how the five suites were born:
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li><strong>Money:</strong> Pinkas and ClockIt handle attendance and payroll.</li>
-              <li><strong>Work:</strong> Docs and Chat keep you writing and talking.</li>
-              <li><strong>Create:</strong> Eye and Swap help creators.</li>
-              <li><strong>Learn:</strong> Prep and Bible give students offline tools.</li>
-              <li><strong>AI:</strong> Omni ties it all together.</li>
+              <li><strong>Money:</strong> Pinkas and ClockIt handle enterprise session tracking, Face AI, and automated Payroll.</li>
+              <li><strong>Work:</strong> Docs for offline editing, Kaleo for data-saving video calls, and Chat for private messaging.</li>
+              <li><strong>Create:</strong> Eye for teleprompting, Swap for file conversion, and Aidao Player for premium offline media playback.</li>
+              <li><strong>Learn:</strong> Prep for 10,000+ offline JAMB questions, and Oneness Bible for offline reading.</li>
+              <li><strong>AI:</strong> Omni ties it all together as a general-purpose AI assistant.</li>
             </ul>
 
             <h2 className="text-3xl font-bold text-navy mt-12 mb-6">No Bloat. Just Tools.</h2>
             <p className="mb-6">
-              We don't do endless features. We strip away the clutter to give you tools that just work. No steep learning curves, no unnecessary updates. Just fast, reliable software built for the realities of running a school, a business, or a creative project.
+              We don't do endless features. We strip away the clutter to give you tools that just work. No steep learning curves, no unnecessary updates. Just fast, reliable software built for the realities of running a school, a factory, a creative project, or a solo hustle.
             </p>
             <p>
               Built in Lagos. Used everywhere.
