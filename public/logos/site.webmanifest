@@ -1,0 +1,20 @@
+﻿{
+  "name": "Quickie Studio",
+  "short_name": "Quickie",
+  "icons": [
+    {
+      "src": "/logos/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0A1C3A",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
