@@ -21,7 +21,7 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl relative z-10">
         <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-          
+
           {/* Eyebrow Badge */}
           <motion.div variants={fadeUp} className="mb-8 inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-600">
             <span className="flex h-2 w-2 rounded-full bg-green mr-2 animate-pulse"></span>
@@ -30,25 +30,24 @@ export function Hero() {
 
           {/* Main Headline */}
           <motion.h1 variants={fadeUp} className="text-4xl font-extrabold tracking-tight text-navy md:text-6xl lg:text-7xl mb-6 text-balance">
-            One Studio. Nine tools. For schools, businesses, creators and everyday work.
+            One Studio. Nine tools. Built for the way you work.
           </motion.h1>
 
           {/* Subhead */}
           <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto text-balance">
-            Whether you're running a school, a team, a business or a solo project — Quickie Studio has a tool for it. 
-            <span className="font-semibold text-navy"> Three are paid. The rest are free today.</span>
+            From enterprise attendance kiosks and payroll for your school or business, to private AI and everyday tools. Start with a 7-day free trial.
           </motion.p>
 
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link 
-              href="#suites" 
-              className="w-full sm:w-auto rounded-full bg-navy px-8 py-4 text-base font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl"
+            <Link
+              href="/business"
+              className="w-full sm:w-auto rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl"
             >
-              Explore the Studio ↓
+              Explore Business Tools
             </Link>
-            <Link 
-              href="/suites" 
+            <Link
+              href="/suites"
               className="w-full sm:w-auto rounded-full border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-navy transition-colors hover:bg-gray-50"
             >
               View all apps
@@ -59,10 +58,9 @@ export function Hero() {
           <motion.p variants={fadeUp} className="mt-8 text-sm font-medium text-gray-400">
             Built in Lagos, Nigeria 🇳🇬
           </motion.p>
-          
+
         </motion.div>
       </div>
     </section>
   );
 }
-

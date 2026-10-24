@@ -24,10 +24,10 @@ export default function BusinessPage() {
       {/* HERO SECTION */}
       <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
-        
+
         <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-            
+
             {/* Logos */}
             <motion.div variants={fadeUp} className="mb-8 flex justify-center items-center gap-6">
               <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5 p-2 backdrop-blur-md">
@@ -40,12 +40,12 @@ export default function BusinessPage() {
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              Enterprise Attendance <br className="hidden md:block"/> & Payroll.
+              Enterprise Attendance <br className="hidden md:block" /> & Payroll.
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
               Offline-capable kiosks, Face AI verification, and automated Paystack billing. From classrooms to factories, we track who is actually there.
             </motion.p>
-            
+
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mb-10">
               <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">📶 Offline-First</span>
               <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">🛡️ Face AI</span>
@@ -123,7 +123,7 @@ export default function BusinessPage() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 order-1 lg:order-2 flex justify-center w-full">
-               <div className="relative w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
+              <div className="relative w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
                 <Image src="/screenshots/pinkas-dashboard.png" alt="Pinkas Dashboard" width={1200} height={800} className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
@@ -165,7 +165,7 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* PRICING & PROOF */}
+      {/* PRICING & TRIAL */}
       <section className="py-24 bg-navy text-white">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
@@ -176,8 +176,8 @@ export default function BusinessPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             {/* Pinkas Pricing */}
-             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+            {/* Pinkas Pricing */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-2">Pinkas</h3>
               <p className="text-gray-400 mb-6 text-sm">Presence tracking for sessions.</p>
               <div className="space-y-4 mb-8">
@@ -209,11 +209,23 @@ export default function BusinessPage() {
             </motion.div>
           </div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-12 text-center">
-            <p className="text-sm text-gray-400 mb-6">Currently piloting at <strong className="text-white">Pardee Food Nigeria</strong>.</p>
-            <Link href="mailto:hello@quickiestudio.com" className="inline-block rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
-              Book a Demo
-            </Link>
+          {/* The Trial Flow & Demo CTA */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-16 bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 text-center backdrop-blur-sm">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Try it risk-free for 7 days.</h3>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Every organization gets a 7-day full-access trial. If you don't subscribe, you'll get another 7 days of read-only access to export your data before your account is paused.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="https://quickie-pinkas.vercel.app" target="_blank" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
+                Start Pinkas Trial ↗
+              </Link>
+              <Link href="https://quickie-clockit.vercel.app" target="_blank" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
+                Start ClockIt Trial ↗
+              </Link>
+            </div>
+            <p className="text-sm text-gray-400 mt-6">
+              No credit card required to start.
+            </p>
           </motion.div>
         </div>
       </section>
