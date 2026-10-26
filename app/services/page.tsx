@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { 
+  GraduationCap, 
+  Factory, 
+  HeartPulse, 
+  Hotel, 
+  Rocket, 
+  Building2,
+  CheckCircle2
+} from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,6 +24,83 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
+const industries = [
+  {
+    title: "Education & Schools",
+    icon: <GraduationCap className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Custom school portals & parent dashboards",
+      "Automated report cards & exam portals",
+      "Election portals for student unions",
+      "Offline exam prep (JAMB/WAEC)",
+      "Face AI attendance tracking"
+    ],
+    proofName: "Quickie Prep & Pinkas",
+    proofLink: "/business"
+  },
+  {
+    title: "Factories & Agribusiness",
+    icon: <Factory className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Shift scheduling & routing",
+      "Payroll multipliers (weekends/holidays)",
+      "Offline biometric kiosks (no internet)",
+      "Union timesheet exports",
+      "Bulk worker onboarding via CSV"
+    ],
+    proofName: "Quickie ClockIt",
+    proofLink: "/business#clockit"
+  },
+  {
+    title: "Healthcare & Hospitals",
+    icon: <HeartPulse className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Doctor/nurse shift rotations",
+      "Patient check-in kiosks",
+      "Secure internal messaging",
+      "Ward security & Face AI verification"
+    ],
+    proofName: "Quickie ClockIt",
+    proofLink: "/business#clockit"
+  },
+  {
+    title: "Hospitality & Events",
+    icon: <Hotel className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Guest check-in kiosks",
+      "Room tracking & stays",
+      "Event badge scanning",
+      "Multi-track symposium check-ins"
+    ],
+    proofName: "Quickie Pinkas",
+    proofLink: "/business#pinkas"
+  },
+  {
+    title: "Startups & Tech",
+    icon: <Rocket className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Data-saving WebRTC calling",
+      "High-performance PWAs",
+      "Custom media players & visualizers",
+      "Offline-first architectures"
+    ],
+    proofName: "Kaleo & Aidao Player",
+    proofLink: "/suites"
+  },
+  {
+    title: "Enterprise & HR",
+    icon: <Building2 className="w-8 h-8 text-cyan mb-4" />,
+    capabilities: [
+      "Multi-tenant SaaS dashboards",
+      "Automated payroll exports",
+      "Paystack subscription billing",
+      "Role-based access control (RBAC)"
+    ],
+    proofName: "Quickie ClockIt",
+    proofLink: "/business#clockit"
+  }
+];
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
@@ -23,16 +109,16 @@ export default function ServicesPage() {
       {/* HERO SECTION */}
       <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan/10 blur-[120px] rounded-full pointer-events-none"></div>
-
+        
         <div className="container mx-auto px-4 md:px-8 max-w-5xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
             <motion.div variants={fadeUp} className="mb-6 flex justify-center">
               <span className="px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold border border-white/20">
-                Enterprise Software Agency
+                🚀 Enterprise Software Agency
               </span>
             </motion.div>
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              We build software that <br className="hidden md:block" /> survives the real world.
+              We build software that <br className="hidden md:block"/> survives the real world.
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
               Offline-first kiosks, AI integrations, and data-saving PWAs. We don't just write code—we solve operational bottlenecks for schools, factories, and startups.
@@ -58,60 +144,32 @@ export default function ServicesPage() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {industries.map((industry, index) => (
+              <motion.div key={index} variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
+                {industry.icon}
+                <h3 className="text-xl font-bold text-navy mb-4">{industry.title}</h3>
+                
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {industry.capabilities.map((cap, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                      <CheckCircle2 className="w-4 h-4 text-green mt-0.5 flex-shrink-0" />
+                      <span>{cap}</span>
+                    </li>
+                  ))}
+                </ul>
 
-            {/* Education */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">🏫</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Education & Schools</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Offline exam prep, automated report cards, and Face AI kiosks for tracking student attendance.</p>
-              <div className="flex items-center gap-2 text-xs font-bold text-cyan">
-                <span>See Proof:</span>
-                <Link href="/suites/learn" className="hover:underline">Quickie Prep ↗</Link>
-              </div>
-            </motion.div>
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <div className="flex items-center gap-2 text-xs font-bold text-navy">
+                    <span className="text-gray-400">Proof:</span>
+                    <Link href={industry.proofLink} className="text-cyan hover:underline flex items-center gap-1">
+                      {industry.proofName} ↗
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
 
-            {/* Factories */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Factories & Agribusiness</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Shift routing, offline biometric clock-ins, payroll multipliers, and union timesheet exports.</p>
-              <div className="flex items-center gap-2 text-xs font-bold text-cyan">
-                <span>See Proof:</span>
-                <Link href="/business#clockit" className="hover:underline">Quickie ClockIt ↗</Link>
-              </div>
-            </motion.div>
-
-            {/* Healthcare */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Healthcare & Clinics</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Doctor shift rotations, patient check-in kiosks, and secure internal messaging platforms.</p>
-            </motion.div>
-
-            {/* Hospitality */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">🏨</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Hospitality & Events</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Guest check-in kiosks, room tracking, and high-speed QR badge scanning for symposia.</p>
-              <div className="flex items-center gap-2 text-xs font-bold text-cyan">
-                <span>See Proof:</span>
-                <Link href="/business#pinkas" className="hover:underline">Quickie Pinkas ↗</Link>
-              </div>
-            </motion.div>
-
-            {/* Startups */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Startups & Tech</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Data-saving WebRTC calling, high-performance PWAs, and custom media players.</p>
-            </motion.div>
-
-            {/* HR & Enterprise */}
-            <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan/40 transition-all flex flex-col">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-navy mb-2">Enterprise & HR</h3>
-              <p className="text-gray-600 text-sm flex-grow mb-6">Multi-tenant SaaS dashboards, automated payroll exports, and Paystack billing webhooks.</p>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -123,7 +181,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl md:text-5xl font-extrabold text-navy mb-6">The Aidao/Pinkas Standard.</h2>
             <p className="text-lg text-gray-600 mb-12">When we build for you, we use the exact same tech stack that powers our own products.</p>
           </motion.div>
-
+          
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
               <div className="text-2xl mb-3">📶</div>
@@ -150,7 +208,7 @@ export default function ServicesPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">Let's build your next system.</h2>
             <p className="text-xl text-gray-300 mb-12">Contact for a quote. We respond within 24 hours.</p>
-
+            
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://calendar.app.google/EKCqCqgCpuZzuKs58" target="_blank" rel="noreferrer" className="w-full sm:w-auto rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
                 Book a Discovery Call
