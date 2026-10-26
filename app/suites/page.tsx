@@ -6,6 +6,7 @@ import Image from "next/image";
 import { apps } from "@/lib/apps";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ArrowUpRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -37,7 +38,7 @@ export default function AllAppsPage() {
 
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-          <motion.div 
+          <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
@@ -60,11 +61,10 @@ export default function AllAppsPage() {
                 <p className="text-sm text-gray-500 mb-6 line-clamp-2 flex-grow">{app.tagline}</p>
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
                   <span
-                    className={`text-xs font-bold px-2 py-1 rounded-md ${
-                      app.pricing === "paid"
+                    className={`text-xs font-bold px-2 py-1 rounded-md ${app.pricing === "paid"
                         ? "bg-navy/5 text-navy"
                         : "bg-green-100 text-green-700"
-                    }`}
+                      }`}
                   >
                     {app.pricing === "paid" ? "Paid" : "Free"}
                   </span>
@@ -72,9 +72,9 @@ export default function AllAppsPage() {
                     <Link
                       href={app.url || "#"}
                       target="_blank"
-                      className="text-sm font-medium text-cyan hover:text-navy transition-colors"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-cyan hover:text-navy transition-colors"
                     >
-                      Open ↗
+                      Open <ArrowUpRight className="w-4 h-4" />
                     </Link>
                   ) : (
                     <span className="text-xs font-medium text-gray-400">

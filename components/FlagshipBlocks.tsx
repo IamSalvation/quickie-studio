@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,8 +28,8 @@ export function FlagshipBlocks() {
               Pinkas handles schools, symposiums, bootcamps, and hotels. Recurring sessions, custom master sheets, and QR badge scanning. The most flexible tool in the Studio.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/business" className="rounded-full bg-quickie-gradient px-6 py-3 text-sm font-bold text-navy shadow-md transition-transform hover:scale-105">
-                Explore Pinkas ↗
+              <Link href="/business" className="inline-flex items-center gap-2 rounded-full bg-quickie-gradient px-6 py-3 text-sm font-bold text-navy shadow-md transition-transform hover:scale-105">
+                Explore Pinkas <ArrowUpRight className="w-4 h-4" />
               </Link>
               <span className="text-sm font-semibold text-gray-400">From ₦35,000/mo</span>
             </div>
@@ -53,8 +54,8 @@ export function FlagshipBlocks() {
               The twin to Pinkas, built for farms, factories, and hospitals. Shift routing, Face AI anti-buddy-punching, and automated Paystack billing.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/business" className="rounded-full bg-navy px-6 py-3 text-sm font-bold text-white shadow-md transition-transform hover:scale-105">
-                Explore ClockIt ↗
+              <Link href="/business" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white shadow-md transition-transform hover:scale-105">
+                Explore ClockIt <ArrowUpRight className="w-4 h-4" />
               </Link>
               <span className="text-sm font-semibold text-gray-400">From ₦40,000/mo</span>
             </div>

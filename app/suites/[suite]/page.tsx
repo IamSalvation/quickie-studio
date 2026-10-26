@@ -4,16 +4,16 @@ import Image from "next/image";
 import { apps, Suite } from "@/lib/apps";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ArrowUpRight, ArrowLeft } from "lucide-react";
 
 const suiteDetails: Record<Suite, { title: string, description: string }> = {
-    money: { title: "Money", description: "Presence, attendance and payroll — for schools, events and teams." },
-    work: { title: "Work", description: "Write and talk — privately, in your browser." },
-    create: { title: "Create", description: "Record and convert — nothing uploaded." },
+    money: { title: "Money", description: "Enterprise Attendance, HR & Payroll. Offline kiosks, Face AI, and Paystack billing." },
+    work: { title: "Work", description: "Write, talk, and call — privately, in your browser." },
+    create: { title: "Create", description: "Record, convert, and play — nothing uploaded." },
     learn: { title: "Learn", description: "Study and read — offline where it counts." },
     ai: { title: "AI", description: "One assistant across the Studio." },
 };
 
-// This tells Next.js exactly which pages to build ahead of time.
 export async function generateStaticParams() {
     return [
         { suite: "money" },
@@ -41,8 +41,8 @@ export default async function SuitePage({ params }: { params: Promise<{ suite: s
 
             <section className="pt-24 pb-16 bg-gray-50 border-b border-gray-100">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-                    <Link href="/" className="text-sm font-medium text-gray-500 hover:text-navy mb-6 inline-block">
-                        ← Back to Studio
+                    <Link href="/" className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-navy mb-6">
+                        <ArrowLeft className="w-4 h-4" /> Back to Studio
                     </Link>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-navy tracking-tight mb-4">
                         {suiteInfo.title}
@@ -77,9 +77,9 @@ export default async function SuitePage({ params }: { params: Promise<{ suite: s
                                     <Link
                                         href={app.url || "#"}
                                         target="_blank"
-                                        className="inline-block rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy/90 transition-colors w-fit"
+                                        className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy/90 transition-colors w-fit"
                                     >
-                                        Open {app.name} ↗
+                                        Open {app.name} <ArrowUpRight className="w-4 h-4" />
                                     </Link>
                                 ) : (
                                     <span className="inline-block rounded-full bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-400 cursor-not-allowed w-fit">
