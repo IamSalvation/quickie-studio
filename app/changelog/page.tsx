@@ -48,6 +48,24 @@ export default function ChangelogPage() {
                 </div>
               </div>
             </div>
+            {/* Update 0 - LATEST */}
+            <div className="relative pl-8 md:pl-0">
+              <div className="md:flex items-start gap-8">
+                <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
+                  <span className="text-sm font-bold text-gray-400">Today</span>
+                </div>
+                <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
+                  <div className="absolute w-4 h-4 bg-cyan rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <h3 className="text-2xl font-bold text-navy mb-2">Premium Design Polish: 100% Lucide Icons</h3>
+                  <p className="text-gray-600 mb-4">We replaced every emoji and text character with clean, scalable SVG icons across the entire site.</p>
+                  <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
+                    <li>Added <strong>Lucide React</strong> SVG icons to Services, AI, Business, and Education pages.</li>
+                    <li>Replaced text arrows (↗, →) with proper <code>&lt;ArrowUpRight /&gt;</code> components.</li>
+                    <li>Updated the Homepage Suite Grid to use dynamic SVG icons.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
             {/* Update 1 */}
             <div className="relative pl-8 md:pl-0">
@@ -111,4 +129,5 @@ export default function ChangelogPage() {
     </main>
   );
 }
+
 
