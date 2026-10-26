@@ -1,4 +1,6 @@
-﻿export function StudioStandard() {
+﻿import { Lock, Zap, X } from "lucide-react";
+
+export function StudioStandard() {
   return (
     <section className="py-24 bg-navy text-white">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
@@ -14,8 +16,8 @@
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Pillar 1 */}
           <div className="text-center md:text-left">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
-              <span className="text-cyan text-2xl font-bold">🔒</span>
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
+              <Lock className="w-6 h-6 text-cyan" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">100% Yours</h3>
             <p className="text-gray-400">
@@ -25,8 +27,8 @@
 
           {/* Pillar 2 */}
           <div className="text-center md:text-left">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
-              <span className="text-green text-2xl font-bold">⚡</span>
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
+              <Zap className="w-6 h-6 text-green" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">Instant Access</h3>
             <p className="text-gray-400">
@@ -36,8 +38,8 @@
 
           {/* Pillar 3 */}
           <div className="text-center md:text-left">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
-              <span className="text-white text-2xl font-bold">✕</span>
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 mb-6 mx-auto md:mx-0">
+              <X className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">No Friction</h3>
             <p className="text-gray-400">

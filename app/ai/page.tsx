@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image";`nimport { BookOpen, PenTool, Calendar, Scale } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -204,13 +204,13 @@ export default function AIPage() {
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             {[
-              { title: "Explain", desc: "Break down complex topics into simple terms.", icon: "📖" },
-              { title: "Write", desc: "Draft emails, reports, and lesson plans effortlessly.", icon: "✍️" },
-              { title: "Plan", desc: "Structure your day, your project, or your curriculum.", icon: "📅" },
-              { title: "Compare", desc: "Weigh two ideas against each other to make a choice.", icon: "⚖️" }
+              { title: "Explain", desc: "Break down complex topics into simple terms.", icon: <BookOpen className="w-8 h-8 text-cyan" /> },
+              { title: "Write", desc: "Draft emails, reports, and lesson plans effortlessly.", icon: <PenTool className="w-8 h-8 text-cyan" /> },
+              { title: "Plan", desc: "Structure your day, your project, or your curriculum.", icon: <Calendar className="w-8 h-8 text-cyan" /> },
+              { title: "Compare", desc: "Weigh two ideas against each other to make a choice.", icon: <Scale className="w-8 h-8 text-cyan" /> }
             ].map((feature, i) => (
               <motion.div key={i} variants={fadeUp} className="group p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:bg-white/[0.05] hover:border-cyan/30 transition-all cursor-default">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">{feature.icon}</div>
+                <div className="mb-4 group-hover:scale-110 transition-transform origin-left">{feature.icon}</div>
                 <h3 className="text-2xl font-bold mb-2 text-white">{feature.title}</h3>
                 <p className="text-gray-400">{feature.desc}</p>
               </motion.div>

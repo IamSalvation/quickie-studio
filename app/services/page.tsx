@@ -11,8 +11,7 @@ import {
   Hotel, 
   Rocket, 
   Building2,
-  CheckCircle2
-} from "lucide-react";
+  CheckCircle2, Wifi, CreditCard, ShieldCheck } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -184,17 +183,17 @@ export default function ServicesPage() {
           
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="text-2xl mb-3">📶</div>
+              <Wifi className="w-8 h-8 text-cyan mb-4" />
               <h4 className="font-bold text-navy mb-2">Offline-First Architecture</h4>
               <p className="text-sm text-gray-600">IndexedDB and Service Workers ensure your app never crashes when the internet drops.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="text-2xl mb-3">💳</div>
+              <CreditCard className="w-8 h-8 text-cyan mb-4" />
               <h4 className="font-bold text-navy mb-2">Naira-Native Billing</h4>
               <p className="text-sm text-gray-600">Paystack integration with automated webhooks for instant subscription upgrades.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="text-2xl mb-3">🛡️</div>
+              <ShieldCheck className="w-8 h-8 text-cyan mb-4" />
               <h4 className="font-bold text-navy mb-2">Face AI & Security</h4>
               <p className="text-sm text-gray-600">128-dimension facial embeddings and NDPR-compliant data handling for kiosks.</p>
             </motion.div>
@@ -228,3 +227,4 @@ export default function ServicesPage() {
     </main>
   );
 }
+
