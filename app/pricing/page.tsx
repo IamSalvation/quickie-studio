@@ -36,7 +36,7 @@ export default function PricingPage() {
       <section className="py-16 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             {/* Free Tier */}
             <motion.div variants={fadeUp} className="rounded-3xl bg-white p-10 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
               <h2 className="text-2xl font-bold text-navy mb-2">The Studio</h2>
@@ -44,16 +44,16 @@ export default function PricingPage() {
               <p className="text-gray-500 mb-8">
                 Access the everyday tools. No credit card required.
               </p>
-              
+
               <ul className="space-y-4 mb-10 text-gray-600">
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Docs (Offline Editor)</li>
+                <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Chat (Real-time messaging)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Kaleo (Video Calls)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Aidao (Media Player)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Eye (Teleprompter)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Swap (File Converter)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Prep (JAMB Practice)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Bible (Offline Reading)</li>
-                <li className="flex items-center gap-3 text-gray-400"><span className="text-gray-300 font-bold">+</span> Chat (Free when it launches)</li>
               </ul>
 
               <Link href="/suites" className="block w-full rounded-xl bg-gray-100 py-4 text-center font-bold text-navy hover:bg-gray-200 transition-colors">
@@ -71,7 +71,7 @@ export default function PricingPage() {
               <p className="text-gray-300 mb-8">
                 Serious tools for schools, teams, and AI. Built to scale.
               </p>
-              
+
               <ul className="space-y-4 mb-10 text-gray-300">
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> Pinkas from ₦35,000/mo</li>
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> ClockIt from ₦40,000/mo</li>
@@ -92,13 +92,13 @@ export default function PricingPage() {
           <motion.h3 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-2xl font-bold text-navy mb-8 text-center">
             Frequently Asked Questions
           </motion.h3>
-          
+
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="space-y-6">
             <motion.div variants={fadeUp} className="bg-white p-6 rounded-2xl border border-gray-200">
               <h4 className="font-bold text-navy mb-2">Will the free apps stay free?</h4>
               <p className="text-gray-600 text-sm">Yes. If any free app moves to a paid tier later, existing users will be notified first and keep their current access.</p>
             </motion.div>
-            
+
             <motion.div variants={fadeUp} className="bg-white p-6 rounded-2xl border border-gray-200">
               <h4 className="font-bold text-navy mb-2">Do I need an account?</h4>
               <p className="text-gray-600 text-sm">Not for the free apps. Just open the link and start working. No sign-up required.</p>

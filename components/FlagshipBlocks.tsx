@@ -42,7 +42,7 @@ export function FlagshipBlocks() {
         </div>
 
         {/* CLOCKIT - Flagship 2 */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-32">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-1 text-left">
             <div className="inline-flex items-center rounded-full bg-navy/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy mb-6">
               The Workforce Engine
@@ -63,6 +63,33 @@ export function FlagshipBlocks() {
           <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full">
             <div className="relative rounded-2xl border border-gray-200 bg-gray-50 p-2 shadow-2xl">
               <Image src="/screenshots/clockit-desktop.png" alt="ClockIt Dashboard" width={1200} height={800} className="rounded-xl w-full h-auto" />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* QUICKIE CHAT - Flagship 3 */}
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-1 text-left">
+            <div className="inline-flex items-center rounded-full bg-navy/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy mb-6">
+              The Communication Engine
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">
+              Instant, private messaging.
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-lg">
+              No emails. No spam. Just your phone number and a secure PIN. Send voice notes, media, and real-time messages with a stunning dark-mode UI.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link href="/chat" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white shadow-md transition-transform hover:scale-105">
+                Explore Quickie Chat <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <span className="text-sm font-semibold text-gray-400">Free forever</span>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full flex justify-center lg:justify-end">
+            {/* Phone Mockup for Chat */}
+            <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
+              <Image src="/screenshots/chat-mobile-dark.png" alt="Quickie Chat" fill className="object-cover" />
             </div>
           </motion.div>
         </div>

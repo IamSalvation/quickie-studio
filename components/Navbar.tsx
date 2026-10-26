@@ -11,6 +11,7 @@ export function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Business", href: "/business" },
     { name: "Education", href: "/education" },
+    { name: "Chat", href: "/chat" },
     { name: "Apps", href: "/suites" },
     { name: "AI", href: "/ai" },
     { name: "Pricing", href: "/pricing" },
@@ -38,7 +39,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-5">
             {links.map((link) => (
               <Link
                 key={link.name}
