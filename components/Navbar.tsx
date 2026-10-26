@@ -8,6 +8,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
+    { name: "Services", href: "/services" },
     { name: "Business", href: "/business" },
     { name: "Education", href: "/education" },
     { name: "Apps", href: "/suites" },
@@ -37,7 +38,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <Link
                 key={link.name}
