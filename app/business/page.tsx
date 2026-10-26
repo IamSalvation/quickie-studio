@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Wifi, ShieldCheck, Timer, CreditCard, ArrowUpRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -28,7 +29,6 @@ export default function BusinessPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
 
-            {/* Logos */}
             <motion.div variants={fadeUp} className="mb-8 flex justify-center items-center gap-6">
               <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5 p-2 backdrop-blur-md">
                 <Image src="/logos/pinkas.png" alt="Pinkas" fill className="object-contain p-1" />
@@ -47,9 +47,9 @@ export default function BusinessPage() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mb-10">
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">📶 Offline-First</span>
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">🛡️ Face AI</span>
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">💳 Paystack Billing</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Offline-First</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Face AI</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Paystack Billing</span>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
@@ -74,22 +74,22 @@ export default function BusinessPage() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div variants={fadeUp} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
-              <div className="text-4xl mb-4">📶</div>
+              <div className="mb-4"><Wifi className="w-8 h-8 text-cyan" /></div>
               <h3 className="text-xl font-bold text-navy mb-2">Offline-First Kiosks</h3>
               <p className="text-gray-600">Internet drops? The kiosk keeps scanning using IndexedDB queues and syncs to the cloud when the connection returns.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
-              <div className="text-4xl mb-4">🛡️</div>
+              <div className="mb-4"><ShieldCheck className="w-8 h-8 text-cyan" /></div>
               <h3 className="text-xl font-bold text-navy mb-2">Anti-Buddy-Punching</h3>
               <p className="text-gray-600">128-dim Face AI embeddings with NDPR consent. Flags anomalies for review without blocking legitimate workers.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
-              <div className="text-4xl mb-4">⏱️</div>
+              <div className="mb-4"><Timer className="w-8 h-8 text-cyan" /></div>
               <h3 className="text-xl font-bold text-navy mb-2">Flexible Pay Multipliers</h3>
               <p className="text-gray-600">Weekend pay, holiday rates, and custom overtime rules cascaded automatically. No more spreadsheet math.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
-              <div className="text-4xl mb-4">💳</div>
+              <div className="mb-4"><CreditCard className="w-8 h-8 text-cyan" /></div>
               <h3 className="text-xl font-bold text-navy mb-2">Automated Billing</h3>
               <p className="text-gray-600">Paystack subscriptions with instant webhooks. Self-service upgrades from V1 to V2 with zero admin friction.</p>
             </motion.div>
@@ -117,8 +117,8 @@ export default function BusinessPage() {
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold text-xl">✓</span> Public Parent/Worker Portal</li>
               </ul>
               <div className="flex flex-wrap gap-4">
-                <Link href="/suites/learn" className="rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
-                  See Education Use Case ↗
+                <Link href="/suites/learn" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
+                  See Education Use Case <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.div>
@@ -156,8 +156,8 @@ export default function BusinessPage() {
                 <li className="flex items-center gap-3"><span className="text-green font-bold text-xl">✓</span> One-click Payroll CSV Export</li>
               </ul>
               <div className="flex flex-wrap gap-4">
-                <Link href="/suites/money" className="rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
-                  See Business Use Case ↗
+                <Link href="/suites/money" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
+                  See Business Use Case <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.div>
@@ -176,7 +176,6 @@ export default function BusinessPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Pinkas Pricing */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-2">Pinkas</h3>
               <p className="text-gray-400 mb-6 text-sm">Presence tracking for sessions.</p>
@@ -192,7 +191,6 @@ export default function BusinessPage() {
               </div>
             </motion.div>
 
-            {/* ClockIt Pricing */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-2">ClockIt</h3>
               <p className="text-gray-400 mb-6 text-sm">Workforce & payroll OS.</p>
@@ -209,18 +207,17 @@ export default function BusinessPage() {
             </motion.div>
           </div>
 
-          {/* The Trial Flow & Demo CTA */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-16 bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 text-center backdrop-blur-sm">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Try it risk-free for 7 days.</h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Every organization gets a 7-day full-access trial. If you don't subscribe, you'll get another 7 days of read-only access to export your data before your account is paused.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="https://quickie-pinkas.vercel.app" target="_blank" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
-                Start Pinkas Trial ↗
+              <Link href="https://quickie-pinkas.vercel.app" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
+                Start Pinkas Trial <ArrowUpRight className="w-5 h-5" />
               </Link>
-              <Link href="https://quickie-clockit.vercel.app" target="_blank" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
-                Start ClockIt Trial ↗
+              <Link href="https://quickie-clockit.vercel.app" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
+                Start ClockIt Trial <ArrowUpRight className="w-5 h-5" />
               </Link>
             </div>
             <p className="text-sm text-gray-400 mt-6">

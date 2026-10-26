@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ArrowUpRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,8 +23,8 @@ export default function EducationPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
             <div className="mb-6 flex justify-center gap-4">
-               <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-2"><Image src="/logos/prep.png" alt="Prep" fill className="object-contain p-1" /></div>
-               <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-2"><Image src="/logos/pinkas.png" alt="Pinkas" fill className="object-contain p-1" /></div>
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-2"><Image src="/logos/prep.png" alt="Prep" fill className="object-contain p-1" /></div>
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-2"><Image src="/logos/pinkas.png" alt="Pinkas" fill className="object-contain p-1" /></div>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
               From the classroom to the exam hall.
@@ -54,11 +55,11 @@ export default function EducationPage() {
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold text-xl">✓</span> 100% Offline Capable</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold text-xl">✓</span> Real 2-hour timed mocks</li>
               </ul>
-              <Link href="https://quickie-prep.netlify.app" target="_blank" className="rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
-                Start Practicing Free ↗
+              <Link href="https://quickie-prep.netlify.app" target="_blank" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
+                Start Practicing Free <ArrowUpRight className="w-4 h-4" />
               </Link>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full">
               <div className="relative rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
                 <Image src="/screenshots/prep-desktop.png" alt="Quickie Prep" width={1200} height={800} className="rounded-xl w-full h-auto" />
@@ -82,11 +83,11 @@ export default function EducationPage() {
               <p className="text-lg text-gray-600 mb-8">
                 Turn any tablet into a check-in kiosk with Quickie Pinkas. Automate your school's attendance, manage terms, and generate master sheets instantly.
               </p>
-              <Link href="/business" className="rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
-                See how Pinkas works ↗
+              <Link href="/business" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
+                See how Pinkas works <ArrowUpRight className="w-4 h-4" />
               </Link>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full">
               <div className="relative rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
                 <Image src="/screenshots/pinkas-students.png" alt="Pinkas Students" width={1200} height={800} className="rounded-xl w-full h-auto" />

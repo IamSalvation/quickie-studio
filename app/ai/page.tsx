@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, PenTool, Calendar, Scale } from "lucide-react";
+import { BookOpen, PenTool, Calendar, Scale, Sparkles, ArrowUp, Lock } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -59,13 +59,12 @@ export default function AIPage() {
 
       {/* HERO SECTION WITH MOVING GRADIENT */}
       <section className="relative pt-32 pb-32 overflow-hidden border-b border-white/5">
-        {/* Animated Aurora Background */}
         <div className="absolute inset-0 animate-aurora opacity-20 pointer-events-none"></div>
 
         <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
 
-            {/* Omni Logo - Glowing, No Background Container */}
+            {/* Omni Logo */}
             <motion.div variants={fadeUp} className="mb-8 flex justify-center">
               <div className="relative w-28 h-28 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan to-green opacity-30 blur-2xl rounded-full"></div>
@@ -100,8 +99,7 @@ export default function AIPage() {
                 method="POST"
                 className="flex flex-col sm:flex-row gap-3"
               >
-                {/* REPLACE YOUR_ACCESS_KEY_HERE WITH YOUR ACTUAL WEB3FORMS KEY */}
-                <input type="hidden" name="access_key" value="3b38af5f-b00b-44e0-aa7b-d06c284c5fa8" />
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
                 <input type="hidden" name="subject" value="New Omni Waitlist Signup!" />
 
                 <input
@@ -150,8 +148,8 @@ export default function AIPage() {
 
             {/* Omni Message */}
             <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-quickie-gradient flex items-center justify-center flex-shrink-0 text-navy font-bold">
-                ✨
+              <div className="w-10 h-10 rounded-full bg-quickie-gradient flex items-center justify-center flex-shrink-0 text-navy">
+                <Sparkles className="w-5 h-5" />
               </div>
               <div className="bg-cyan/10 border border-cyan/20 rounded-2xl rounded-tl-sm p-4 text-gray-200 text-sm w-full">
                 <p className="mb-4 text-white font-semibold">Here is your 3-step launch plan:</p>
@@ -185,7 +183,7 @@ export default function AIPage() {
             <div className="mt-8 flex items-center gap-3 bg-black/50 border border-white/10 rounded-full p-2 pl-6">
               <span className="text-gray-500 text-sm flex-grow">Ask Omni to write, plan, or analyze...</span>
               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-colors">
-                ↑
+                <ArrowUp className="w-4 h-4" />
               </div>
             </div>
           </motion.div>
@@ -224,7 +222,9 @@ export default function AIPage() {
       <section className="py-24 border-t border-white/5 bg-[#020408]">
         <div className="container mx-auto px-4 md:px-8 max-w-3xl text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="w-16 h-16 mx-auto bg-cyan/10 rounded-2xl flex items-center justify-center text-3xl mb-8">🔒</div>
+            <div className="w-16 h-16 mx-auto bg-cyan/10 rounded-2xl flex items-center justify-center mb-8">
+              <Lock className="w-8 h-8 text-cyan" />
+            </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Your data is yours. Period.</h2>
             <p className="text-gray-400 text-lg">
               We do not train Omni on your personal documents, chats, or business data. It is a tool that works for you, not a data harvester that works for us.
@@ -237,4 +237,3 @@ export default function AIPage() {
     </main>
   );
 }
-
