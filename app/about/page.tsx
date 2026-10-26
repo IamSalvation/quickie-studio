@@ -31,19 +31,22 @@ export default function AboutPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="prose prose-lg prose-navy mx-auto text-gray-600">
             <h2 className="text-3xl font-bold text-navy mb-6">Our Story</h2>
             <p className="mb-6">
-              Quickie Studio started in Lagos, Nigeria, with a simple frustration: why does workforce and attendance software have to be so heavy? Why do you need a dozen subscriptions, a high-end server, and a forced cloud connection just to track who is in a building or process payroll?
+              Quickie Studio started in Lagos, Nigeria, with a simple frustration: why does workforce and attendance software have to be so heavy? Why do you need a dozen subscriptions, a high-end server, and a forced cloud connection just to track who is in a building, process payroll, or send a message?
             </p>
             <p className="mb-6">
               We believe in <strong>local-first, offline-capable software</strong>. We believe your data is yours, and that tools should work even when the internet doesn't. That's why our apps like Docs and Bible run entirely on your device, and our enterprise kiosks (Pinkas and ClockIt) use IndexedDB to keep scanning even when the network drops.
             </p>
-            
+            <p className="mb-6">
+              And with the launch of <strong>Quickie Chat</strong>, we've proven that you don't need a massive cloud infrastructure to build a fast, secure, and beautiful real-time messaging platform. Just your phone number, a secure PIN, and zero emails required.
+            </p>
+
             <h2 className="text-3xl font-bold text-navy mt-12 mb-6">The 11-App Ecosystem</h2>
             <p className="mb-6">
               We didn't want to build just one app. We wanted to build an ecosystem. That's how the five suites were born:
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-2">
               <li><strong>Money:</strong> Pinkas and ClockIt handle enterprise session tracking, Face AI, and automated Payroll.</li>
-              <li><strong>Work:</strong> Docs for offline editing, Kaleo for data-saving video calls, and Chat for private messaging.</li>
+              <li><strong>Work:</strong> Docs for offline editing, Quickie Chat for real-time private messaging, and Kaleo for data-saving video calls.</li>
               <li><strong>Create:</strong> Eye for teleprompting, Swap for file conversion, and Aidao Player for premium offline media playback.</li>
               <li><strong>Learn:</strong> Prep for 10,000+ offline JAMB questions, and Oneness Bible for offline reading.</li>
               <li><strong>AI:</strong> Omni ties it all together as a general-purpose AI assistant.</li>
