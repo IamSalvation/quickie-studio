@@ -88,18 +88,17 @@ export function FlagshipBlocks() {
               <span className="text-sm font-semibold text-gray-400">Free forever</span>
             </div>
 
-            {/* New Caption + Light Mode Phone below main text */}
             <div className="hidden lg:flex flex-col items-start gap-4">
               <p className="text-sm font-bold text-navy uppercase tracking-wider">
                 No sign-up forms. Just your phone number and a PIN.
               </p>
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative w-[260px] h-[520px] bg-white rounded-[2.5rem] border-[8px] border-gray-200 shadow-2xl overflow-hidden">
-                <Image src="/screenshots/chat-mobile-light.png" alt="Quickie Chat Login" fill className="object-cover" />
+                {/* FIXED IMAGE NAME HERE */}
+                <Image src="/screenshots/signup-mobile-light.png" alt="Quickie Chat Login" fill className="object-cover" />
               </motion.div>
             </div>
           </motion.div>
 
-          {/* Dark Mode Phone on the right */}
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full flex justify-center lg:justify-end">
             <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
               <Image src="/screenshots/chat-mobile-dark.png" alt="Quickie Chat" fill className="object-cover" />

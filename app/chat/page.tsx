@@ -86,7 +86,6 @@ export default function ChatPage() {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
 
-          {/* Header */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">
               A chat experience you'll love.
@@ -96,18 +95,17 @@ export default function ChatPage() {
             </p>
           </motion.div>
 
-          {/* Side by Side Mobile Phones */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-16">
             <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
               <Image src="/screenshots/chat-mobile-dark.png" alt="Quickie Chat Dark Mode" fill className="object-cover" />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative w-[300px] h-[600px] bg-white rounded-[3rem] border-[8px] border-gray-200 shadow-2xl overflow-hidden">
-              <Image src="/screenshots/chat-mobile-light.png" alt="Quickie Chat Light Mode" fill className="object-cover" />
+              {/* FIXED IMAGE NAME HERE */}
+              <Image src="/screenshots/signup-mobile-light.png" alt="Quickie Chat Light Mode" fill className="object-cover" />
             </motion.div>
           </div>
 
-          {/* Checkmarks */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-2xl mx-auto mb-20">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 font-medium">
               <li className="flex items-center gap-3"><Check className="w-5 h-5 text-[#8B5CF6]" /> Emoji picker with 330+ emojis</li>
@@ -117,7 +115,6 @@ export default function ChatPage() {
             </ul>
           </motion.div>
 
-          {/* Desktop Screenshot */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-5xl mx-auto">
             <div className="rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl overflow-hidden">
               <Image src="/screenshots/chat-desktop-light.png" alt="Quickie Chat Desktop" width={1200} height={800} className="rounded-xl w-full h-auto" />
