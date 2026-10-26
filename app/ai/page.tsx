@@ -3,7 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";`nimport { BookOpen, PenTool, Calendar, Scale } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, PenTool, Calendar, Scale } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -236,3 +237,4 @@ export default function AIPage() {
     </main>
   );
 }
+
