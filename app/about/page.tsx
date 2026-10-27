@@ -40,7 +40,7 @@ export default function AboutPage() {
               And with the launch of <strong>Quickie Chat</strong>, we've proven that you don't need a massive cloud infrastructure to build a fast, secure, and beautiful real-time messaging platform. Just your phone number, a secure PIN, and zero emails required.
             </p>
 
-            <h2 className="text-3xl font-bold text-navy mt-12 mb-6">The 11-App Ecosystem</h2>
+            <h2 className="text-3xl font-bold text-navy mt-12 mb-6">The 12-App Ecosystem</h2>
             <p className="mb-6">
               We didn't want to build just one app. We wanted to build an ecosystem. That's how the five suites were born:
             </p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <li><strong>Work:</strong> Docs for offline editing, Quickie Chat for real-time private messaging, and Kaleo for data-saving video calls.</li>
               <li><strong>Create:</strong> Eye for teleprompting, Swap for file conversion, and Aidao Player for premium offline media playback.</li>
               <li><strong>Learn:</strong> Prep for 10,000+ offline JAMB questions, and Oneness Bible for offline reading.</li>
-              <li><strong>AI:</strong> Omni ties it all together as a general-purpose AI assistant.</li>
+              <li><strong>AI:</strong> Omni is our general-purpose AI assistant, live and free to use right now.</li>
             </ul>
 
             <h2 className="text-3xl font-bold text-navy mt-12 mb-6">No Bloat. Just Tools.</h2>

@@ -86,7 +86,8 @@ const industries = [
       "Data-saving WebRTC calling",
       "High-performance PWAs",
       "Custom media players & visualizers",
-      "Offline-first architectures"
+      "Offline-first architectures",
+      "Custom AI integrations (Omni)"
     ],
     proofName: "Kaleo & Aidao Player",
     proofLink: "/suites"

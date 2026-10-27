@@ -48,6 +48,7 @@ export default function PricingPage() {
               <ul className="space-y-4 mb-10 text-gray-600">
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Docs (Offline Editor)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Chat (Real-time messaging)</li>
+                <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Omni (AI Assistant)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Kaleo (Video Calls)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Aidao (Media Player)</li>
                 <li className="flex items-center gap-3"><span className="text-cyan font-bold">✓</span> Eye (Teleprompter)</li>
@@ -75,7 +76,6 @@ export default function PricingPage() {
               <ul className="space-y-4 mb-10 text-gray-300">
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> Pinkas from ₦35,000/mo</li>
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> ClockIt from ₦40,000/mo</li>
-                <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> Omni (Launching soon)</li>
               </ul>
 
               <Link href="/business" className="block w-full rounded-xl bg-quickie-gradient py-4 text-center font-bold text-navy hover:opacity-90 transition-opacity">

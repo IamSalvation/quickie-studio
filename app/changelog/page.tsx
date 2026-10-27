@@ -31,11 +31,30 @@ export default function ChangelogPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="space-y-12">
 
-            {/* Update 1 - Quickie Chat Launch */}
+            {/* Update 1 - Omni Launch */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
                 <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
                   <span className="text-sm font-bold text-gray-400">Today</span>
+                </div>
+                <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
+                  <div className="absolute w-4 h-4 bg-cyan rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <h3 className="text-2xl font-bold text-navy mb-2">Omni is Officially Live</h3>
+                  <p className="text-gray-600 mb-4">Our general-purpose AI assistant is now active and free to use.</p>
+                  <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
+                    <li>Launched the new <strong>/ai</strong> page with mobile screenshots and a "Launch Omni" button.</li>
+                    <li>Added a Dark Mode Omni Banner to the Homepage.</li>
+                    <li>Omni is currently <strong>Free</strong> for all users.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Update 2 - Quickie Chat Launch */}
+            <div className="relative pl-8 md:pl-0">
+              <div className="md:flex items-start gap-8">
+                <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
+                  <span className="text-sm font-bold text-gray-400">Yesterday</span>
                 </div>
                 <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
                   <div className="absolute w-4 h-4 bg-[#8B5CF6] rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
@@ -51,14 +70,14 @@ export default function ChangelogPage() {
               </div>
             </div>
 
-            {/* Update 2 - Lucide Icons */}
+            {/* Update 3 - Lucide Icons */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
                 <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
-                  <span className="text-sm font-bold text-gray-400">Yesterday</span>
+                  <span className="text-sm font-bold text-gray-400">Oct 24, 2026</span>
                 </div>
                 <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
-                  <div className="absolute w-4 h-4 bg-cyan rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <div className="absolute w-4 h-4 bg-navy rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
                   <h3 className="text-2xl font-bold text-navy mb-2">Premium Design Polish: 100% Lucide Icons</h3>
                   <p className="text-gray-600 mb-4">We replaced every emoji and text character with clean, scalable SVG icons across the entire site.</p>
                   <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
@@ -70,14 +89,14 @@ export default function ChangelogPage() {
               </div>
             </div>
 
-            {/* Update 3 - Business & AI Pages */}
+            {/* Update 4 - Business & AI Pages */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
                 <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
                   <span className="text-sm font-bold text-gray-400">Oct 23, 2026</span>
                 </div>
                 <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
-                  <div className="absolute w-4 h-4 bg-navy rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <div className="absolute w-4 h-4 bg-green rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
                   <h3 className="text-2xl font-bold text-navy mb-2">Business & AI Pages Launch</h3>
                   <p className="text-gray-600 mb-4">We introduced two dedicated enterprise pages for our paid tools.</p>
                   <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
@@ -89,14 +108,14 @@ export default function ChangelogPage() {
               </div>
             </div>
 
-            {/* Update 4 - Education & Services */}
+            {/* Update 5 - Education & Services */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
                 <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">
                   <span className="text-sm font-bold text-gray-400">Oct 20, 2026</span>
                 </div>
                 <div className="flex-1 pb-12 border-l border-gray-200 pl-8 md:pl-8 relative">
-                  <div className="absolute w-4 h-4 bg-green rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
+                  <div className="absolute w-4 h-4 bg-navy rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
                   <h3 className="text-2xl font-bold text-navy mb-2">Education & Services Pages</h3>
                   <p className="text-gray-600 mb-4">Expanding the Studio to serve schools and custom software clients.</p>
                   <ul className="list-disc pl-5 text-gray-500 space-y-1 text-sm">
@@ -108,7 +127,7 @@ export default function ChangelogPage() {
               </div>
             </div>
 
-            {/* Update 5 - Initial Launch */}
+            {/* Update 6 - Initial Launch */}
             <div className="relative pl-8 md:pl-0">
               <div className="md:flex items-start gap-8">
                 <div className="hidden md:block w-32 flex-shrink-0 text-right pt-1">

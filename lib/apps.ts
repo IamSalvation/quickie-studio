@@ -34,8 +34,8 @@ export const apps: App[] = [
   { slug: "prep", name: "Quickie Prep", suite: "learn", tagline: "10,000+ verified JAMB questions. 100% offline.", url: "https://quickie-prep.netlify.app", status: "live", pricing: "free" },
   { slug: "bible", name: "Oneness Bible", suite: "learn", tagline: "One with The Word. Offline, in four languages.", url: "https://iamsalvation.github.io/bible-site/", status: "live", pricing: "free" },
 
-  // AI (Paid/Coming Soon)
-  { slug: "omni", name: "Omni", suite: "ai", tagline: "Your general-purpose AI assistant for writing, planning, and analyzing.", url: null, status: "coming-soon", pricing: "paid", launchNote: "Launching soon" },
+  // AI (Free / Live)
+  { slug: "omni", name: "Omni", suite: "ai", tagline: "Your general-purpose AI assistant for writing, planning, and analyzing.", url: "https://omni-ai.up.railway.app", status: "live", pricing: "free" },
 ];
 
 export const totalApps = apps.length;
