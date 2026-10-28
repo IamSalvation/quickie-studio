@@ -44,7 +44,7 @@ export default function ChatPage() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="https://quickie-chattie.onrender.com" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#7C3AED]">
+              <Link href="https://chat.quickie-studio.com" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#7C3AED]">
                 Open Quickie Chat <ArrowUpRight className="w-5 h-5" />
               </Link>
             </motion.div>
@@ -101,7 +101,6 @@ export default function ChatPage() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative w-[300px] h-[600px] bg-white rounded-[3rem] border-[8px] border-gray-200 shadow-2xl overflow-hidden">
-              {/* FIXED IMAGE NAME HERE */}
               <Image src="/screenshots/signup-mobile-light.png" alt="Quickie Chat Light Mode" fill className="object-cover" />
             </motion.div>
           </div>

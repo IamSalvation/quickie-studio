@@ -22,7 +22,7 @@ export const apps: App[] = [
 
   // WORK (Free)
   { slug: "docs", name: "Quickie Docs", suite: "work", tagline: "A full-featured editor that works offline.", url: "https://iamsalvation.github.io/quickie_docs/", status: "live", pricing: "free" },
-  { slug: "chat", name: "Quickie Chat", suite: "work", tagline: "Real-time private messaging. No email required. Voice notes & media sharing.", url: "https://quickie-chattie.onrender.com", status: "live", pricing: "free", flagship: true },
+  { slug: "chat", name: "Quickie Chat", suite: "work", tagline: "Real-time private messaging. No email required. Voice notes & media sharing.", url: "https://chat.quickie-studio.com", status: "live", pricing: "free", flagship: true },
   { slug: "kaleo", name: "Kaleo", suite: "work", tagline: "Data-saving voice & video calls. Crystal clear, even on limited mobile data.", url: "https://kaleo-o4es.onrender.com", status: "live", pricing: "free" },
 
   // CREATE (Free)
