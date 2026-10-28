@@ -94,7 +94,7 @@ export default function AIPage() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex justify-center">
-              <Link href="https://omni-ai.up.railway.app" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-quickie-gradient px-10 py-4 text-lg font-bold text-navy shadow-lg transition-transform hover:scale-105">
+              <Link href="https://omni.quickie-studio.com" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-quickie-gradient px-10 py-4 text-lg font-bold text-navy shadow-lg transition-transform hover:scale-105">
                 Launch Omni <ArrowUpRight className="w-5 h-5" />
               </Link>
             </motion.div>
@@ -197,4 +197,4 @@ export default function AIPage() {
       <Footer />
     </main>
   );
-} 
+}
