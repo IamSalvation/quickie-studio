@@ -76,6 +76,7 @@ export default function PricingPage() {
               <ul className="space-y-4 mb-10 text-gray-300">
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> Pinkas from ₦35,000/mo</li>
                 <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> ClockIt from ₦40,000/mo</li>
+                <li className="flex items-center gap-3"><span className="text-green font-bold">✓</span> Enterprise support</li>
               </ul>
 
               <Link href="/business" className="block w-full rounded-xl bg-quickie-gradient py-4 text-center font-bold text-navy hover:opacity-90 transition-opacity">
