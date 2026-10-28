@@ -9,6 +9,7 @@ export function Navbar() {
 
   const links = [
     { name: "Services", href: "/services" },
+    { name: "Portfolios", href: "/portfolios" },
     { name: "Business", href: "/business" },
     { name: "Education", href: "/education" },
     { name: "Chat", href: "/chat" },

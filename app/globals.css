@@ -58,3 +58,19 @@
   background-size: 800% 800%;
   animation: aurora 15s ease infinite;
 }
+
+/* The Marquee Animation for the Logo Carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
