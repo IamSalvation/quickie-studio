@@ -17,8 +17,8 @@ export type App = {
 
 export const apps: App[] = [
   // MONEY (Paid)
-  { slug: "pinkas", name: "Quickie Pinkas", suite: "money", tagline: "Session tracking for schools, events, and stays. Recurring sessions, master sheets, and Face AI.", url: "https://quickie-pinkas.vercel.app", status: "live", pricing: "paid", flagship: true },
-  { slug: "clockit", name: "Quickie ClockIt", suite: "money", tagline: "Workforce HR and payroll. Shift routing, face verification, and one-click CSV exports.", url: "https://quickie-clockit.vercel.app", status: "live", pricing: "paid", flagship: true },
+  { slug: "pinkas", name: "Quickie Pinkas", suite: "money", tagline: "Session tracking for schools, events, and stays. Recurring sessions, master sheets, and Face AI.", url: "https://pinkas.quickie-studio.com", status: "live", pricing: "paid", flagship: true },
+  { slug: "clockit", name: "Quickie ClockIt", suite: "money", tagline: "Workforce HR and payroll. Shift routing, face verification, and one-click CSV exports.", url: "https://clockit.quickie-studio.com", status: "live", pricing: "paid", flagship: true },
 
   // WORK (Free)
   { slug: "docs", name: "Quickie Docs", suite: "work", tagline: "A full-featured editor that works offline.", url: "https://iamsalvation.github.io/quickie_docs/", status: "live", pricing: "free" },
