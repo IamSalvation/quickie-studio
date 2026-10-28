@@ -15,7 +15,9 @@ import {
   Wifi,
   CreditCard,
   ShieldCheck,
-  ArrowUpRight
+  ArrowUpRight,
+  Monitor,
+  Globe
 } from "lucide-react";
 
 const fadeUp = {
@@ -179,8 +181,50 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* THE TECH EDGE */}
+      {/* NEW: PROFESSIONAL PORTFOLIOS SERVICE */}
       <section className="py-24 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-1">
+              <div className="inline-flex items-center rounded-full bg-navy/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy mb-6">
+                Web Design Service
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">
+                Premium portfolios for professionals.
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Stand out to recruiters and high-paying clients. We build custom, high-performance personal websites for Virtual Assistants, Medical Professionals, HR Executives, Digital Marketers, and more.
+              </p>
+              <ul className="space-y-3 mb-8 text-gray-700 font-medium">
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-cyan" /> Your own custom domain (e.g., yourname.com)</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-cyan" /> Mobile-responsive design</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-cyan" /> Lightning-fast Next.js architecture</li>
+              </ul>
+              <Link href="/portfolios" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white hover:bg-navy/90 transition-colors">
+                View Portfolio Examples <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 grid grid-cols-2 gap-4">
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+                <Monitor className="w-8 h-8 text-cyan mb-3" />
+                <h4 className="font-bold text-navy text-sm">Custom UI</h4>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+                <Globe className="w-8 h-8 text-cyan mb-3" />
+                <h4 className="font-bold text-navy text-sm">Personal Domain</h4>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center col-span-2">
+                <CheckCircle2 className="w-8 h-8 text-green mb-3" />
+                <h4 className="font-bold text-navy text-sm">Get Hired Faster</h4>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* THE TECH EDGE */}
+      <section className="py-24 bg-gray-50/50 border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <h2 className="text-3xl md:text-5xl font-extrabold text-navy mb-6">The Aidao/Pinkas Standard.</h2>
@@ -188,17 +232,17 @@ export default function ServicesPage() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+            <motion.div variants={fadeUp} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
               <div className="mb-4"><Wifi className="w-8 h-8 text-cyan" /></div>
               <h4 className="font-bold text-navy mb-2">Offline-First Architecture</h4>
               <p className="text-sm text-gray-600">IndexedDB and Service Workers ensure your app never crashes when the internet drops.</p>
             </motion.div>
-            <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+            <motion.div variants={fadeUp} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
               <div className="mb-4"><CreditCard className="w-8 h-8 text-cyan" /></div>
               <h4 className="font-bold text-navy mb-2">Naira-Native Billing</h4>
               <p className="text-sm text-gray-600">Paystack integration with automated webhooks for instant subscription upgrades.</p>
             </motion.div>
-            <motion.div variants={fadeUp} className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+            <motion.div variants={fadeUp} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
               <div className="mb-4"><ShieldCheck className="w-8 h-8 text-cyan" /></div>
               <h4 className="font-bold text-navy mb-2">Face AI & Security</h4>
               <p className="text-sm text-gray-600">128-dimension facial embeddings and NDPR-compliant data handling for kiosks.</p>
