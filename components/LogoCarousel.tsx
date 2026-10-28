@@ -5,12 +5,12 @@ import Link from "next/link";
 import { apps } from "@/lib/apps";
 
 export function LogoCarousel() {
-  // Duplicate the array for seamless looping
-  const duplicatedApps = [...apps, ...apps];
+  // Triple the array to ensure the track is wide enough to cover the screen without gaps
+  const duplicatedApps = [...apps, ...apps, ...apps];
 
   return (
-    <section className="py-12 bg-white border-y border-gray-100 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 mb-8 text-center">
+    <section className="py-16 bg-white border-y border-gray-100 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8 mb-10 text-center">
         <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
           Powering 12 tools for the modern workforce
         </p>
@@ -22,19 +22,19 @@ export function LogoCarousel() {
           {duplicatedApps.map((app, index) => (
             <div
               key={`${app.slug}-${index}`}
-              className="mx-6 md:mx-10 flex items-center justify-center"
+              className="mx-10 md:mx-16 flex items-center justify-center"
             >
               <Link
                 href={app.url || "#"}
                 target="_blank"
-                className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 flex-shrink-0"
+                className="transition-transform duration-300 hover:scale-110 flex-shrink-0"
               >
                 <Image
                   src={`/logos/${app.slug}.png`}
                   alt={app.name}
-                  width={64}
-                  height={64}
-                  className="rounded-xl w-12 h-12 md:w-16 md:h-16 object-contain"
+                  width={72}
+                  height={72}
+                  className="rounded-xl w-14 h-14 md:w-20 md:h-20 object-contain"
                 />
               </Link>
             </div>
