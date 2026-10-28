@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://quickie-studio.vercel.app"), // Change if your domain is different
-  title: "Quickie Studio | One Studio. Nine tools.",
-  description: "A hub of nine apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
+  metadataBase: new URL("https://www.quickie-studio.com"),
+  title: "Quickie Studio | One Studio. Twelve tools.",
+  description: "A hub of twelve apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
 
   // PWA & iOS Configuration
   manifest: "/logos/site.webmanifest",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Quickie Studio | One Studio. Nine tools.",
-    description: "A hub of nine apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
-    url: "https://quickie-studio.vercel.app",
+    title: "Quickie Studio | One Studio. Twelve tools.",
+    description: "A hub of twelve apps for schools, businesses, creators and learners. Built in Lagos, Nigeria.",
+    url: "https://www.quickie-studio.com",
     siteName: "Quickie Studio",
     images: [
       {
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quickie Studio | One Studio. Nine tools.",
-    description: "A hub of nine apps for schools, businesses, creators and learners.",
+    title: "Quickie Studio | One Studio. Twelve tools.",
+    description: "A hub of twelve apps for schools, businesses, creators and learners.",
     images: ["/logos/quickie-studio.png"],
   },
 };
