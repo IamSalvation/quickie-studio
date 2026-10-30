@@ -35,29 +35,54 @@ export default function PortfoliosPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan/10 blur-[120px] rounded-full pointer-events-none"></div>
+      {/* HERO SECTION WITH FULL WIDTH IMAGE */}
+      <section className="relative pt-32 pb-32 bg-navy text-white overflow-hidden min-h-[85vh] flex items-center">
 
-        <div className="container mx-auto px-4 md:px-8 max-w-5xl relative z-10 text-center">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-            <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-              <span className="px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold border border-white/20">
-                Premium Web Design
-              </span>
+        {/* Background Image Wrapper */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/screenshots/portfolios-hero.jpg"
+            alt="Quickie Studio Web Designer"
+            fill
+            className="object-cover object-[70%_center] md:object-center"
+            priority
+          />
+          {/* The Gradient Overlays */}
+          {/* Mobile: Solid Navy on top fading to transparent at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-transparent md:hidden"></div>
+          {/* Desktop: Solid Navy on left fading to transparent on right */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+        </div>
+
+        {/* Text Content */}
+        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-6xl">
+          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-2xl text-left">
+
+            <motion.div variants={fadeUp} className="mb-6 md:mb-8 inline-flex items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-white">
+              <span className="flex h-2 w-2 rounded-full bg-cyan mr-2 animate-pulse"></span>
+              Premium Web Design
             </motion.div>
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              Premium web portfolios <br className="hidden md:block" /> for professionals.
+
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 text-balance">
+              Premium web portfolios for professionals.
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-300 mb-10 text-balance">
               We build high-end personal websites for Lawyers, Doctors, Consultants, and Creatives. We also specialize in portfolios for Virtual Assistants, Nurses, Social Media Managers, Executive Assistants, HR Executives, and Digital Marketers.
             </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="#contact" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
+
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                href="#work"
+                className="w-full sm:w-auto rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                View Our Work ↓
+              </Link>
+              <Link
+                href="#contact"
+                className="w-full sm:w-auto rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-white/20 text-center"
+              >
                 Get Your Portfolio
-              </a>
-              <Link href="#work" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
-                View Our Work
               </Link>
             </motion.div>
           </motion.div>
