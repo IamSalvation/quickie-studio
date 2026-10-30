@@ -22,30 +22,53 @@ export default function ChatPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#8B5CF6]/20 blur-[120px] rounded-full pointer-events-none"></div>
+      {/* HERO SECTION WITH FULL WIDTH IMAGE */}
+      <section className="relative pt-32 pb-32 bg-navy text-white overflow-hidden min-h-[85vh] flex items-center">
 
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+        {/* Background Image Wrapper */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/screenshots/chat-hero.jpg"
+            alt="Quickie Chat User"
+            fill
+            className="object-cover object-[70%_center] md:object-center"
+            priority
+          />
+          {/* The Gradient Overlays */}
+          {/* Mobile: Solid Navy on top fading to transparent at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-transparent md:hidden"></div>
+          {/* Desktop: Solid Navy on left fading to transparent on right */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+        </div>
 
-            <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-              <span className="px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold border border-white/20">
-                Quickie Chat is Live
-              </span>
+        {/* Text Content */}
+        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-6xl">
+          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-2xl text-left">
+
+            {/* Badge */}
+            <motion.div variants={fadeUp} className="mb-6 md:mb-8 inline-flex items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-white">
+              <span className="flex h-2 w-2 rounded-full bg-[#8B5CF6] mr-2 animate-pulse"></span>
+              Quickie Chat is Live
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+            {/* Headline */}
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 text-balance">
               Instant, private messaging. <br className="hidden md:block" /> No email required.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+            {/* Subhead */}
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-300 mb-10 text-balance">
               Say goodbye to sign-up forms and spam. Quickie Chat uses your phone number and a secure PIN to connect you instantly. Real-time, dark-mode ready, and built for speed.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="https://chat.quickie-studio.com" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#7C3AED]">
-                Open Quickie Chat <ArrowUpRight className="w-5 h-5" />
+            {/* CTAs */}
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                href="https://chat.quickie-studio.com"
+                target="_blank"
+                className="w-full sm:w-auto rounded-full bg-[#8B5CF6] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Open Quickie Chat <ArrowUpRight className="w-5 h-5 inline-block ml-2" />
               </Link>
             </motion.div>
           </motion.div>
