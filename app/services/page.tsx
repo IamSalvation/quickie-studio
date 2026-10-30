@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -113,32 +114,48 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION WITH SPLIT IMAGE (Left Image, Right Text) */}
       <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
 
-        <div className="container mx-auto px-4 md:px-8 max-w-5xl relative z-10 text-center">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-            <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold border border-white/20">
+            {/* Image Side (Left) */}
+            <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="flex-1 w-full order-2 lg:order-1">
+              <div className="relative w-full aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,229,255,0.15)]">
+                <Image
+                  src="/screenshots/services-hero.jpg"
+                  alt="Quickie Studio Developer"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                {/* Gradient to blend the image into the navy background */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent"></div>
+              </div>
+            </motion.div>
+
+            {/* Text Side (Right) */}
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex-1 text-left order-1 lg:order-2">
+              <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold border border-white/20">
                 <Rocket className="w-4 h-4 text-cyan" /> Enterprise Software Agency
-              </span>
+              </motion.div>
+              <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                We build software that <br className="hidden md:block" /> survives the real world.
+              </motion.h1>
+              <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-xl mb-10">
+                Offline-first kiosks, AI integrations, and data-saving PWAs. We don't just write code—we solve operational bottlenecks for schools, factories, and startups.
+              </motion.p>
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
+                <Link href="#contact" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105 text-center">
+                  Start a Project
+                </Link>
+                <Link href="/business" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20 text-center">
+                  See Our Products
+                </Link>
+              </motion.div>
             </motion.div>
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              We build software that <br className="hidden md:block" /> survives the real world.
-            </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-              Offline-first kiosks, AI integrations, and data-saving PWAs. We don't just write code—we solve operational bottlenecks for schools, factories, and startups.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="#contact" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
-                Start a Project
-              </Link>
-              <Link href="/business" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
-                See Our Products
-              </Link>
-            </motion.div>
-          </motion.div>
+
+          </div>
         </div>
       </section>
 
@@ -181,7 +198,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* NEW: PROFESSIONAL PORTFOLIOS SERVICE */}
+      {/* PROFESSIONAL PORTFOLIOS SERVICE */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-16">
