@@ -22,41 +22,56 @@ export default function BusinessPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 bg-navy text-white overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
+      {/* HERO SECTION - SINGLE WIDE IMAGE */}
+      <section className="relative pt-32 pb-32 bg-navy text-white overflow-hidden flex items-center justify-center min-h-[85vh]">
+
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/screenshots/business-hero-wide.jpg"
+            alt="Quickie Business Use Cases"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          {/* The Overlay: Keeps text readable in the middle, reveals images on the edges */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/95 to-navy/70"></div>
+        </div>
+
+        {/* Center Text Content */}
+        <div className="container mx-auto px-4 md:px-8 max-w-3xl relative z-10 text-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-            
-            <motion.div variants={fadeUp} className="mb-8 flex justify-center items-center gap-6">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5 p-2 backdrop-blur-md">
+
+            {/* Logos */}
+            <motion.div variants={fadeUp} className="mb-8 flex justify-center items-center gap-4">
+              <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-lg border border-white/10 bg-white/10 p-2 backdrop-blur-md">
                 <Image src="/logos/pinkas.png" alt="Pinkas" fill className="object-contain p-1" />
               </div>
               <div className="w-px h-8 bg-white/20"></div>
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5 p-2 backdrop-blur-md">
+              <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-lg border border-white/10 bg-white/10 p-2 backdrop-blur-md">
                 <Image src="/logos/clockit.png" alt="ClockIt" fill className="object-contain p-1" />
               </div>
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              Enterprise Attendance <br className="hidden md:block"/> & Payroll.
+              Enterprise Attendance <br className="hidden md:block" /> & Payroll.
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+
+            <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
               Offline-capable kiosks, Face AI verification, and automated Paystack billing. From classrooms to factories, we track who is actually there.
             </motion.p>
-            
+
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mb-10">
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Offline-First</span>
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Face AI</span>
-              <span className="px-4 py-2 rounded-full bg-white/10 text-sm font-semibold border border-white/10">Paystack Billing</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-sm font-semibold border border-white/10">Offline-First</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-sm font-semibold border border-white/10">Face AI</span>
+              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-sm font-semibold border border-white/10">Paystack Billing</span>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="#pinkas" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
+              <Link href="#pinkas" className="rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105 text-center">
                 Explore Pinkas
               </Link>
-              <Link href="#clockit" className="rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
+              <Link href="#clockit" className="rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20 text-center">
                 Explore ClockIt
               </Link>
             </motion.div>
@@ -123,7 +138,7 @@ export default function BusinessPage() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 order-1 lg:order-2 flex justify-center w-full">
-               <div className="relative w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
+              <div className="relative w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-2 shadow-2xl">
                 <Image src="/screenshots/pinkas-dashboard.png" alt="Pinkas Dashboard" width={1200} height={800} className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
@@ -176,7 +191,7 @@ export default function BusinessPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-2">Pinkas</h3>
               <p className="text-gray-400 mb-6 text-sm">Presence tracking for sessions.</p>
               <div className="space-y-4 mb-8">
