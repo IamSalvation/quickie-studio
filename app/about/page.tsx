@@ -1,32 +1,61 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      <section className="pt-24 pb-16 bg-navy text-white text-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan/10 blur-[100px] rounded-full pointer-events-none"></div>
-        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Software shouldn't be complicated.
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            We built Quickie Studio because the enterprise tools we needed didn't exist. So we made them ourselves.
-          </p>
-        </motion.div>
+      {/* HERO SECTION WITH FULL WIDTH IMAGE */}
+      <section className="relative pt-32 pb-32 bg-navy text-white overflow-hidden min-h-[85vh] flex items-center">
+
+        {/* Background Image Wrapper */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/screenshots/about-hero.jpg"
+            alt="Quickie Studio Brand Ambassador"
+            fill
+            className="object-cover object-[70%_center] md:object-center"
+            priority
+          />
+          {/* The Gradient Overlays */}
+          {/* Mobile: Solid Navy on top fading to transparent at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-transparent md:hidden"></div>
+          {/* Desktop: Solid Navy on left fading to transparent on right */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
+        </div>
+
+        {/* Text Content */}
+        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-6xl">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-2xl text-left">
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white text-balance">
+              Software shouldn't be complicated.
+            </h1>
+
+            <p className="text-xl text-gray-200 max-w-xl mb-10 text-balance">
+              We built Quickie Studio because the enterprise tools we needed didn't exist. So we made them ourselves.
+            </p>
+
+            <a href="#story" className="inline-flex items-center justify-center rounded-full bg-quickie-gradient px-8 py-4 text-base font-bold text-navy shadow-lg transition-transform hover:scale-105">
+              Read Our Story ↓
+            </a>
+
+          </motion.div>
+        </div>
       </section>
 
-      <section className="py-24">
+      {/* OUR STORY SECTION */}
+      <section id="story" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="prose prose-lg prose-navy mx-auto text-gray-600">
             <h2 className="text-3xl font-bold text-navy mb-6">Our Story</h2>
