@@ -22,49 +22,45 @@ export function Navbar() {
   return (
     <>
       <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
 
           {/* Logo Area */}
           <Link href="/" className="flex items-center gap-2.5 z-50" onClick={() => setIsOpen(false)}>
             <Image
-              src="/logos/quickie-studio.png"
+              src="/logos/logo-full.png"
               alt="Quickie Studio Logo"
-              width={32}
-              height={32}
-              className="rounded"
+              width={160}
+              height={45}
+              className="h-10 w-auto object-contain"
             />
-            <span className="text-xl font-bold tracking-tight">
-              <span className="text-[#0A1C3A]">Quickie</span>{" "}
-              <span className="text-[#20C997]">Studio</span>
-            </span>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-5">
+          {/* Desktop Links (Show on lg and up) */}
+          <div className="hidden lg:flex items-center gap-6">
             {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-500 hover:text-navy transition-colors"
+                className="text-sm font-medium text-gray-500 hover:text-navy transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden md:flex items-center gap-4">
-            <Link href="/suites" className="text-sm font-medium text-navy hover:text-cyan transition-colors">
+          {/* Desktop CTAs (Show on lg and up) */}
+          <div className="hidden lg:flex items-center gap-4">
+            <Link href="/suites" className="text-sm font-medium text-navy hover:text-cyan transition-colors whitespace-nowrap">
               View All Apps
             </Link>
-            <Link href="/suites" className="rounded-full bg-quickie-gradient px-5 py-2 text-sm font-semibold text-navy shadow-sm transition-transform hover:scale-105 active:scale-95">
+            <Link href="/suites" className="rounded-full bg-quickie-gradient px-5 py-2.5 text-sm font-semibold text-navy shadow-sm transition-transform hover:scale-105 active:scale-95 whitespace-nowrap">
               Explore Studio
             </Link>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Hamburger Button (Show on lg and down) */}
           <button
-            className="md:hidden z-50 p-2 text-navy flex flex-col gap-1.5"
+            className="lg:hidden z-50 p-2 text-navy flex flex-col gap-1.5"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -77,7 +73,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out flex flex-col pt-24 px-6 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out flex flex-col pt-24 px-6 lg:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="flex flex-col gap-6 text-xl font-bold text-navy">
