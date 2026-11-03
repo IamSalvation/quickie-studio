@@ -2,10 +2,19 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
   try {
+    // Read env vars at request time, not at build time
+    const apiKey = process.env.RESEND_API_KEY;
+    const webhookSecret = process.env.RESEND_WEBHOOK_SECRET;
+
+    if (!apiKey || !webhookSecret) {
+      console.error("Missing RESEND_API_KEY or RESEND_WEBHOOK_SECRET");
+      return new NextResponse("Email service not configured", { status: 500 });
+    }
+
+    const resend = new Resend(apiKey);
+
     // 1. Get the raw body to verify the webhook signature
     const payload = await req.text();
 
@@ -26,15 +35,15 @@ export async function POST(req: NextRequest) {
         timestamp,
         signature,
       },
-      webhookSecret: process.env.RESEND_WEBHOOK_SECRET!,
+      webhookSecret,
     });
 
-    // 4. Check if the event is an incoming email
+    // 4. Forward incoming emails
     if (result.type === "email.received") {
       const { error } = await resend.emails.receiving.forward({
         emailId: result.data.email_id,
-        to: "obiorajoshua@gmail.com", // Your Gmail address
-        from: "hello@quickie-studio.com", // The custom address it forwards from
+        to: "obiorajoshua@gmail.com",
+        from: "hello@quickie-studio.com",
       });
 
       if (error) {
