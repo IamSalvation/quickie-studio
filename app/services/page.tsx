@@ -282,7 +282,7 @@ export default function ServicesPage() {
               <a href="https://wa.me/2347062547022" target="_blank" rel="noreferrer" className="w-full sm:w-auto rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
                 Chat on WhatsApp
               </a>
-              <a href="mailto:obiorajoshua@gmail.com" className="w-full sm:w-auto rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
+              <a href="mailto:hello@quickie-studio.com" className="w-full sm:w-auto rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white transition-colors hover:bg-white/20">
                 Send an Email
               </a>
             </div>
